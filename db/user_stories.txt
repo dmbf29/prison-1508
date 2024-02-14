@@ -1,0 +1,13 @@
+[ ] - As a user I can see one prison's criminals
+# prisons#show
+get '/prisons/:id'
+
+[ ] - As a user I can add a criminal to a prison
+# criminals#new
+# criminals#create
+get '/prisons/:prison_id/criminals/new
+post '/prisons/:prison_id/criminals
+
+[ ] - As a user I can execute/release a criminal
+# criminals#destroy
+delete '/criminals/:id'

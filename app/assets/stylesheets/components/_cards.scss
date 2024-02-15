@@ -1,24 +1,3 @@
-.banner {
-  background-size: cover;
-  background-position: center;
-  padding: 150px 0;
-}
-
-.banner h1 {
-  margin: 0;
-  color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
-  font-weight: bold;
-}
-
-.banner p {
-  font-size: 20px;
-  color: white;
-  opacity: .7;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-}
-
 .card-category {
   background-size: cover;
   background-position: center;
@@ -40,12 +19,44 @@
   top: 8px;
   right: 8px;
   text-decoration: none;
-  color: red;
+  color: $red;
   opacity: 0.8;
   &:hover {
-    color: red;
+    color: $red;
     opacity: 1;
     text-decoration: none;
+  }
+}
+
+.card-add-link {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  text-decoration: none;
+  color: white;
+  opacity: 0.8;
+  &:hover {
+    color: white;
+    opacity: 1;
+    text-decoration: none;
+  }
+}
+
+.card-tags {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  width: 80%;
+
+  span {
+    background: $red;
+    font-size: .7em;
+    padding: 2px 4px;
+    border-radius: 3px;
+  }
+
+  a {
+    color: $white;
   }
 }
 

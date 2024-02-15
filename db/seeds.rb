@@ -1,4 +1,7 @@
 puts "Cleaning the db..."
+Charge.destroy_all
+Crime.destroy_all
+Criminal.destroy_all
 Prison.destroy_all
 
 puts "Creating a prison..."
@@ -41,3 +44,12 @@ students.each do |name, image_url|
     prison: alcatraz
   )
 end
+
+puts "Creating crimes..."
+crimes = ['arson', 'cooking meth', 'ate last gyoza', 'cannnibalism', 'poor indentation', 'tiktoking' ]
+crimes.each do |crime|
+  Crime.create!(
+    name: crime
+  )
+end
+puts "... created #{Crime.count} crimes"

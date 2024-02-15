@@ -1,0 +1,8 @@
+<div class="container mt-3">
+  <h1>Add a Charge to <%= @criminal.name %></h1>
+  <%= simple_form_for [@criminal, @charge] do |f| %>
+    <%= f.input :date, html5: true %>
+    <%= f.association :crime, collection: @crimes, include_blank: false %>
+    <%= f.submit class: 'btn btn-danger mt-2' %>
+  <% end %>
+</div>

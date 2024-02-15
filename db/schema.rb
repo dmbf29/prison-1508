@@ -10,7 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_02_14_081426) do
+ActiveRecord::Schema[7.1].define(version: 2024_02_15_080733) do
+  create_table "charges", force: :cascade do |t|
+    t.date "date"
+    t.integer "crime_id", null: false
+    t.integer "criminal_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["crime_id"], name: "index_charges_on_crime_id"
+    t.index ["criminal_id"], name: "index_charges_on_criminal_id"
+  end
+
+  create_table "crimes", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "criminals", force: :cascade do |t|
     t.string "name"
     t.string "image_url"
@@ -27,5 +43,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_14_081426) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "charges", "crimes"
+  add_foreign_key "charges", "criminals"
   add_foreign_key "criminals", "prisons"
 end

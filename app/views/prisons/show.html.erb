@@ -4,7 +4,7 @@
     <%= link_to 'Sign Up', new_prison_criminal_path(@prison), class: 'btn btn-danger mt-2' %>
   </div>
 </div>
-<div class="container mt-2">
+<div class="container mt-3">
   <div class="cards">
     <% @prison.criminals.each do |criminal| %>
       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= criminal.image_url %>)">

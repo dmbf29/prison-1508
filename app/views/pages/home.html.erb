@@ -4,10 +4,12 @@
     <p>Change your life and charge criminals</p>
   </div>
 </div>
-<div class="cards mt-3">
-  <% @prisons.each do |prison| %>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= prison.banner_url %>)">
-      <%= prison.name %>
-    </div>
-  <% end %>
+<div class="container">
+  <div class="cards mt-3">
+    <% @prisons.each do |prison| %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= prison.banner_url %>)">
+        <%= link_to prison.name, prison_path(prison), class: 'text-decoration-none text-white' %>
+      </div>
+    <% end %>
+  </div>
 </div>

@@ -1,0 +1,13 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.urban.org/sites/default/files/shutterstock_365427041_crop.jpg);">
+  <div class="container">
+    <h1>Prison Place</h1>
+    <p>Change your life and charge criminals</p>
+  </div>
+</div>
+<div class="cards mt-3">
+  <% @prisons.each do |prison| %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= prison.banner_url %>)">
+      <%= prison.name %>
+    </div>
+  <% end %>
+</div>

@@ -73,6 +73,7 @@ end
 # Custom Added
 gem "autoprefixer-rails"
 gem "bootstrap", "~> 5.2"
+gem "cloudinary"
 gem 'faker'
 gem "font-awesome-sass", "~> 6.1"
 gem "sassc-rails"
